@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: muzixapp
+  name: muzixapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: muzixapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: muzixapp
+    spec:
+      containers:
+      - image: prathyusha97/docker_assignment
+        name: muzixapp
+        ports:
+        - containerPort: 9090
+        resources: {}
+status: {}
